@@ -1,6 +1,6 @@
 # Valeur et amortissement des avions
 
-Projet Python d'estimation de la valeur et de l'amortissement d'un avion commercial. Deuxième projet d'un portefeuille orienté aviation et leasing d'avions.a
+Projet Python d'estimation de la valeur et de l'amortissement d'un avion commercial. Deuxième projet d'un portefeuille orienté aviation et leasing d'avions.
 
 ## Méthode
 
@@ -15,6 +15,7 @@ Trois approches sont comparées pour l'A320-200 et le 737-800 :
 La valeur de marché de 2020 est inférieure à la valeur comptable à tous les âges : pour l'A320-200, de 7 % à 5 ans, de 18 % à 10 ans et de 24 % à 20 ans ; pour le 737-800, de 5 %, 32 % et 22 %. Les fourchettes de 2026 sont plus élevées que les valeurs de 2020 à 10 ans, et la valeur comptable y tombe à l'intérieur.
 
 Graphique : output/comptable_vs_marche.png
+![Valeur comptable et valeur de marché](output/comptable_vs_marche.png)
 Script : src/amortissement.py
 
 ## Limites
