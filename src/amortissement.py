@@ -23,13 +23,17 @@ import matplotlib.pyplot as plt
 
 DOSSIER_SORTIE = DOSSIER_PROJET / "output"
 ages = list(range(0, 26))
-
+marche26 = pd.read_csv(DOSSIER_DATA / "valeurs_marche_2026.csv")
+marche26["modele"] = marche26["modele"].replace({"A320ceo": "A320-200"})
 fig, axes = plt.subplots(1, 2, figsize=(12, 5), sharey=True)
 for axe, modele in zip(axes, PRIX_NEUF_MUSD):
     prix = PRIX_NEUF_MUSD[modele]
     axe.plot(ages, [valeur_comptable(prix, a) for a in ages], color="#1f77b4", label="Valeur comptable (25 ans, 15 %)")
     points = marche[marche["modele"] == modele]
     axe.plot(points["age_ans"], points["valeur_musd"], "o-", color="#d95f02", label="Valeur de marché (AVAC 2020)")
+    pts26 = marche26[marche26["modele"] == modele]
+    axe.vlines(pts26["age_ans"], pts26["valeur_min_musd"], pts26["valeur_max_musd"], color="#2ca02c", linewidth=8,
+               alpha=0.6, label="Fourchette de marché (Avialinker 2026)")
     axe.set_title(modele)
     axe.set_xlabel("Âge (ans)")
 axes[0].set_ylabel("Valeur (M$)")
