@@ -1,0 +1,10 @@
+modele,age_ans,valeur_min_musd,valeur_max_musd,source,annee_source
+A320ceo,10,19,28,Avialinker,2026
+A320ceo,15,12,20,Avialinker,2026
+A320ceo,20,6,13,Avialinker,2026
+737-800,10,18,27,Avialinker,2026
+737-800,15,12,20,Avialinker,2026
+737-800,20,6,14,Avialinker,2026
+A320neo,4,48,62,Avialinker,2026
+A320neo,7,42,56,Avialinker,2026
+A320neo,10,34,46,Avialinker,2026
